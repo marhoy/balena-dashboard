@@ -1,0 +1,20 @@
+version: '2.1'
+
+services:
+  
+  rutertider:
+    restart: always
+    build: ./flask-rutertider
+    ports:
+      - "5000:5000"
+
+  meteogram:
+    restart: always
+    build: ./meteogram
+    ports:
+      - "5001:5000"
+
+  chromekiosk:
+    build: ./balena-chromium-kiosk
+    privileged: true
+
