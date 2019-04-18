@@ -4,6 +4,12 @@
 [submodule "meteogram"]
 	path = meteogram
 	url = https://github.com/marhoy/meteogram
-[submodule "balena-chromium-kiosk"]
-	path = balena-chromium-kiosk
-	url = https://github.com/jayatvars/balena-chromium-kiosk
+[submodule "x11-window-manager"]
+	path = x11-window-manager
+	url = https://github.com/balena-io-playground/x11-window-manager
+[submodule "balena-wifi-reboot"]
+	path = balena-wifi-reboot
+	url = https://github.com/marhoy/balena-wifi-reboot
+[submodule "balena-chromekiosk"]
+	path = balena-chromekiosk
+	url = https://github.com/marhoy/balena-chromekiosk

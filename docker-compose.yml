@@ -15,6 +15,14 @@ services:
       - "5001:5000"
 
   chromekiosk:
-    build: ./balena-chromium-kiosk
+    build: ./x11-window-manager
     privileged: true
+    depends_on:
+      - rutertider
+      - meteogram
 
+  wifireboot:
+    build: ./balena-wifi-reboot
+    labels:
+      io.balena.features.supervisor-api: '1'
+        
