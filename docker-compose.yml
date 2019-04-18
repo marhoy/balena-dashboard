@@ -3,26 +3,28 @@ version: '2.1'
 services:
   
   rutertider:
-    restart: always
     build: ./flask-rutertider
+    restart: always
     ports:
       - "5000:5000"
 
   meteogram:
-    restart: always
     build: ./meteogram
+    restart: always
     ports:
       - "5001:5000"
 
   chromekiosk:
-    build: ./x11-window-manager
+    build: ./balena-chromekiosk
     privileged: true
+    restart: always
     depends_on:
       - rutertider
       - meteogram
 
   wifireboot:
     build: ./balena-wifi-reboot
+    restart: always
     labels:
       io.balena.features.supervisor-api: '1'
-        
+
