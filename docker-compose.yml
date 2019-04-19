@@ -22,9 +22,27 @@ services:
       - rutertider
       - meteogram
 
-  wifireboot:
-    build: ./balena-wifi-reboot
+#  wifireboot:
+#    build: ./balena-wifi-reboot
+#    restart: always
+#    labels:
+#      io.balena.features.supervisor-api: '1'
+
+  wifirestart:
+    build: ./balena-wifi-restart
     restart: always
+    network_mode: "host"
     labels:
-      io.balena.features.supervisor-api: '1'
+      io.balena.features.dbus: '1'
+
+  telegraf:
+    build: ./balena-telegraf
+    pid: "host"
+    network_mode: "host"
+    privileged: true
+    labels:
+      io.resin.features.balena-socket: '1'
+    environment:
+      - INFLUX_URL=http://influxdb.hjemme.nett:8086
+      - INFLUX_DB=telegraf
 

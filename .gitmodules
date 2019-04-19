@@ -10,3 +10,6 @@
 [submodule "balena-chromekiosk"]
 	path = balena-chromekiosk
 	url = https://github.com/marhoy/balena-chromekiosk
+[submodule "balena-telegraf"]
+	path = balena-telegraf
+	url = https://github.com/marhoy/balena-telegraf
