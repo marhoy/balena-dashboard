@@ -13,3 +13,6 @@
 [submodule "balena-telegraf"]
 	path = balena-telegraf
 	url = https://github.com/marhoy/balena-telegraf
+[submodule "balena-wifi-restart"]
+	path = balena-wifi-restart
+	url = https://github.com/marhoy/balena-wifi-restart
