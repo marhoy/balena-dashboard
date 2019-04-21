@@ -3,25 +3,38 @@ version: '2.1'
 services:
   
   rutertider:
+    restart: always
     build: ./flask-rutertider
     ports:
       - "5000:5000"
 
   meteogram:
+    restart: always
     build: ./meteogram
     ports:
       - "5001:5000"
 
-  chromekiosk:
-    build: ./balena-chromekiosk
+  wpe:
+    restart: always
+    build: ./balena-dash/wpe
     privileged: true
-    labels:
-      io.balena.features.dbus: '1'
+    ports:
+      - 8080:8080
     depends_on:
       - rutertider
       - meteogram
 
+#  chromekiosk:
+#    build: ./balena-chromekiosk
+#    privileged: true
+#    labels:
+#      io.balena.features.dbus: '1'
+#    depends_on:
+#      - rutertider
+#      - meteogram
+
   wifirestart:
+    restart: always
     build: ./balena-wifi-restart
     network_mode: "host"
     privileged: true
@@ -29,6 +42,7 @@ services:
       io.balena.features.kernel-modules: '1'
 
   telegraf:
+    restart: always
     build: ./balena-telegraf
     pid: "host"
     network_mode: "host"
