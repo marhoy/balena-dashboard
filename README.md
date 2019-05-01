@@ -20,3 +20,6 @@ https://github.com/Aietes/docker-rpi3-kiosk
 https://www.balena.io/docs/reference/cli/#config-read
 add “dnsServers”: “XX.XX.XX.XX YY.YY.YY.YY” (space separated) in the config.json
 
+# Test-URL'er for WPE
+- https://www.khronos.org/registry/webgl/sdk/tests/webgl-conformance-tests.html
+- http://www.bouncyballs.org
