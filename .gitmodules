@@ -4,15 +4,12 @@
 [submodule "meteogram"]
 	path = meteogram
 	url = https://github.com/marhoy/meteogram
-[submodule "balena-chromekiosk"]
-	path = balena-chromekiosk
-	url = https://github.com/marhoy/balena-chromekiosk
 [submodule "balena-telegraf"]
 	path = balena-telegraf
 	url = https://github.com/marhoy/balena-telegraf
 [submodule "balena-wifi-restart"]
 	path = balena-wifi-restart
 	url = https://github.com/marhoy/balena-wifi-restart
-[submodule "balena-dash"]
-	path = balena-dash
-	url = https://github.com/balena-io-projects/balena-dash
+[submodule "balena-wpe"]
+	path = balena-wpe
+	url = git@github.com:marhoy/balena-wpe.git
