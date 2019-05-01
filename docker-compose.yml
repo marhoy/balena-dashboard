@@ -16,7 +16,7 @@ services:
 
   wpe:
     restart: always
-    build: ./balena-dash/wpe
+    build: ./balena-wpe
     privileged: true
     ports:
       - 8080:8080
@@ -24,14 +24,15 @@ services:
       - rutertider
       - meteogram
 
-#  chromekiosk:
-#    build: ./balena-chromekiosk
-#    privileged: true
-#    labels:
-#      io.balena.features.dbus: '1'
-#    depends_on:
-#      - rutertider
-#      - meteogram
+  wpe224:
+    restart: always
+    build: ./balena-wpe224
+    privileged: true
+    ports:
+      - 8081:8080
+    depends_on:
+      - rutertider
+      - meteogram
 
   wifirestart:
     restart: always
