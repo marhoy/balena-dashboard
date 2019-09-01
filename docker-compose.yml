@@ -24,16 +24,6 @@ services:
       - rutertider
       - meteogram
 
-  wpe224:
-    restart: always
-    build: ./balena-wpe224
-    privileged: true
-    ports:
-      - 8081:8080
-    depends_on:
-      - rutertider
-      - meteogram
-
   wifirestart:
     restart: always
     build: ./balena-wifi-restart
