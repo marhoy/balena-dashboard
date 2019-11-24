@@ -2,11 +2,11 @@ version: '2.1'
 
 services:
   
-  rutertider:
-    restart: always
-    build: ./flask-rutertider
-    ports:
-      - "5000:5000"
+  #  rutertider:
+  #    restart: always
+  #    build: ./flask-rutertider
+  #    ports:
+  #      - "5000:5000"
 
   meteogram:
     restart: always
@@ -21,7 +21,7 @@ services:
     ports:
       - 8080:8080
     depends_on:
-      - rutertider
+      #      - rutertider
       - meteogram
 
   wifirestart:
