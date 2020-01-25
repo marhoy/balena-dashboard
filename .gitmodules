@@ -1,6 +1,3 @@
-[submodule "flask-rutertider"]
-	path = flask-rutertider
-	url = git@github.com:marhoy/flask-rutertider.git
 [submodule "meteogram"]
 	path = meteogram
 	url = git@github.com:marhoy/meteogram.git
