@@ -9,4 +9,5 @@
 	url = git@github.com:marhoy/balena-wifi-restart.git
 [submodule "balena-wpe"]
 	path = balena-wpe
-	url = git@github.com:marhoy/balena-wpe.git
+    url = git@github.com:marhoy/balena-wpe.git
+    branch = 2.30.x-dunfell
