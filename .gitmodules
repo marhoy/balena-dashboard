@@ -11,6 +11,3 @@
 	path = balena-wpe
 	url = git@github.com:marhoy/balena-wpe.git
 	branch = 2.32.x-dunfell
-[submodule "balena-dns"]
-	path = balena-dns
-	url = https://github.com/willswire/balena-dns.git

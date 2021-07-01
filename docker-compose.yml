@@ -32,14 +32,6 @@ services:
     labels:
       io.balena.features.kernel-modules: '1'
 
-  dns:
-    build: ./balena-dns/networking
-    restart: no
-    network_mode: "host"
-    privileged: true
-    labels:
-      io.balena.features.dbus: '1'
-
   telegraf:
     restart: always
     build: ./balena-telegraf
